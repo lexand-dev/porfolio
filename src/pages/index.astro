@@ -1,0 +1,113 @@
+---
+import Experience from '../components/Experience.astro';
+import Hero from '../components/Hero.astro';
+import Practice from '../components/Practice.astro';
+import Projects from '../components/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Skills from '../components/Skills.astro';
+import ViewMore from '../components/ViewMore.astro';
+import Briefcase from '../components/icons/BriefCase.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import ToolsIcon from '../components/icons/Tools.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Lexand dev | Frontend Developer">
+	<main class="">
+		<SectionContainer id="sobre-mi" class="py-44 pb-32">
+			<Hero />
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold py-4 mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold py-4 mb-6">
+				<span>
+					<CodeIcon class="inline-block size-8 mr-2" />
+				</span>
+				Proyectos
+			</h2>
+			
+			<div class="
+				w-[fit-content]
+				flex
+				flex-col
+				md:flex-wrap
+				md:flex-row 
+				gap-4
+			">
+			
+				<Projects />
+			</div>
+		</SectionContainer>
+
+		<SectionContainer id="practice">
+			<div class="flex items-center gap-6">
+				<h2 class="text-3xl font-semibold py-10">
+					<span>
+						<CodeIcon class="inline-block size-8 mr-2" />
+					</span>
+					Proyectos semanales
+				</h2>
+				<span class="flex items-center text-blue-500">
+					<ViewMore href="/projects" />
+				</span>
+			</div>
+			
+			<div 
+				class="
+					flex 
+					gap-4 
+					overflow-x-auto
+					overflow-y-hidden
+					hide-scroll-bar
+					whitespace-nowrap
+					justify-start
+					items-center
+					justify-items-start
+					justify-self-start
+
+				">
+				<Practice />
+			</div>
+		</SectionContainer>
+
+		<SectionContainer >
+			<h2 class="text-3xl font-bold py-4">
+				<span>
+					<ToolsIcon class="inline-block size-8 mr-2" />
+				</span>
+				Skills
+			</h2>
+			<Skills />
+		</SectionContainer>
+
+		<SectionContainer id="contacto">
+			<h2 class="text-3xl font-bold py-4">
+				<span>
+					<ToolsIcon class="inline-block size-8 mr-2" />
+				</span>
+				Contacto
+			</h2>
+			<div class="flex flex-col gap-4">
+				<p class="text-lg">
+					¿Tienes un proyecto en mente o quieres contactarme? 
+					¡Escríbeme!
+				</p>
+				<a href="mailto:alexfloresrayme@gmail.com" class="text-blue-500">
+				Hello -->
+				</a>
+			</div>
+	</main>
+</Layout>
+
+<script>
+	
+
+</script>

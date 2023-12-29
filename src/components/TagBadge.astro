@@ -1,0 +1,35 @@
+---
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import TypeScript from "./icons/TypeScript.astro";
+const TAGS = [  
+  {
+    name: "NextJS",
+    class: "text-black",
+    Icon: NextJS,
+  },
+  {
+    name: "Tailwind",
+    class: "text-black",
+    Icon: Tailwind,
+  },
+  {
+    name: "TypeScript",
+    class: "text-black",
+    Icon: TypeScript,
+  }
+]
+---
+
+<ul class="flex gap-x-4 flex-row mb-2">
+  {TAGS.map(({name, class: classValue, Icon}) => (
+    <li>
+      <span
+        class={`flex justify-center items-center gap-x-2 rounded-full border border-black bg-slate-100 text-xs ${classValue} py-1 px-3`}
+      >
+        <Icon class="size-5" />
+        {name}
+      </span>
+    </li>
+  ))}
+</ul>

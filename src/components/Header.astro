@@ -1,0 +1,78 @@
+---
+import Spotify from "./icons/Spotify.astro";
+
+---
+
+<header class="
+		flex
+		justify-between
+		items-center
+		py-4
+		px-14
+		sticky top-0
+    z-10
+		border-gray-100
+	">
+		<h1 class="
+			text-2xl
+			font-bold
+			text-gray-800
+		">
+			<a href="/">"Lexand-dev"</a>
+		</h1>
+
+		<nav
+    class={`
+			hidden
+      border border-black rounded-full
+      px-2 py-1
+      md:flex flex-row
+      bg-white/50
+      backdrop-blur-2xl
+    `}
+  >
+    <a
+      class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
+      href="#experiencia">Experiencia</a
+    >
+    <a class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition" href="#proyectos"
+      >Proyectos</a
+    >
+    <a class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition" href="#sobre-mi"
+      >Sobre mí</a
+    >
+    <a class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition" href="#contacto"
+      >Contacto</a
+    >
+  </nav>
+
+		<ul class="hidden md:flex md:gap-5 md:items-center md:font-semibold">
+			<li>
+				<a href="/blog">Blogs</a>
+			</li>
+			<li>
+				<a href="/curriculum">CV</a>
+			</li>
+			<li class="md:text-green-500">
+				<a
+					target="_blank"
+					rel="noopener noreferrer" 
+					href="https://github.com/lexand-dev">Github</a>
+			</li>
+			<li>
+				<a
+					target="_blank"
+					rel="noopener noreferrer" 
+					href="https://open.spotify.com/user/aeumsloeicyzujedcl2b1zfuk">
+					<Spotify />
+				</a>
+			</li>
+		</ul>
+
+		<button class="md:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+			</svg>			
+		</button>
+    
+	</header>
