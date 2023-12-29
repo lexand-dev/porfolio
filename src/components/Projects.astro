@@ -29,7 +29,7 @@ const PROJECTS = [
   {
     title: "Japan Travel - Beautiful Web Design",
     description:
-      "Created from scratch with Astro and Tailwind CSS. It's a web application to travel to Japan. Optimized for SEO and performance.",
+      "Created from scratch with Astro and Tailwind CSS. It's a web application to travel to Japan. Optimized for SEO and performance, it has images in webp format.",
     link: "https://travel-website-blog-anime-manga-food.vercel.app",
     github: "https://github.com/lexand-dev/Travel-Website-blog-anime-manga-food",
     image: "/projects/project-2.webp",
@@ -74,7 +74,7 @@ const PROJECTS = [
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex justify-center items-center gap-x-2 rounded-full border border-black bg-slate-100 text-xs ${tag.class} py-1 px-3`}
+              class={`flex justify-center items-center gap-x-2 rounded-full bg-slate-100 text-xs ${tag.class} py-1 px-3`}
             >
               <tag.icon class="size-5" />
               {tag.name}

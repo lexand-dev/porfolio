@@ -1,5 +1,4 @@
 ---
-import Spotify from "./icons/Spotify.astro";
 
 ---
 
@@ -8,13 +7,18 @@ import Spotify from "./icons/Spotify.astro";
 		justify-between
 		items-center
 		py-4
-		px-14
+		md:px-4
+		lg:px-14
 		sticky top-0
     z-10
 		border-gray-100
+		backdrop-filter
+		backdrop-blur-2xl
+
 	">
 		<h1 class="
-			text-2xl
+			md:text-xl
+			lg:text-2xl
 			font-bold
 			text-gray-800
 		">
@@ -27,6 +31,8 @@ import Spotify from "./icons/Spotify.astro";
       border border-black rounded-full
       px-2 py-1
       md:flex flex-row
+			md:text-xs
+			lg:text-lg
       bg-white/50
       backdrop-blur-2xl
     `}
@@ -46,27 +52,34 @@ import Spotify from "./icons/Spotify.astro";
     >
   </nav>
 
-		<ul class="hidden md:flex md:gap-5 md:items-center md:font-semibold">
-			<li>
-				<a href="/blog">Blogs</a>
-			</li>
-			<li>
+		<ul class="hidden md:flex md:gap-6 md:items-center md:font-semibold">
+			<li class="
+			md:text-green-500 text-xl transition
+			hover:scale-110 
+		hover:bg-white/10">
 				<a href="/curriculum">CV</a>
 			</li>
-			<li class="md:text-green-500">
+			<li class="transition
+			hover:scale-110 
+		hover:bg-white/10">
 				<a
 					target="_blank"
 					rel="noopener noreferrer" 
 					href="https://github.com/lexand-dev">Github</a>
 			</li>
-			<li>
+			<li class="transition
+			hover:scale-110 
+		hover:bg-white/10">
+				<a href="/blog">Blogs</a>
+			</li>	
+<!-- 			<li>
 				<a
 					target="_blank"
 					rel="noopener noreferrer" 
 					href="https://open.spotify.com/user/aeumsloeicyzujedcl2b1zfuk">
 					<Spotify />
 				</a>
-			</li>
+			</li> -->
 		</ul>
 
 		<button class="md:hidden">
