@@ -6,18 +6,17 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 interface Props {
 	title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="
-      A personal website for me, Alexander Flores, a Frontend Developer and designer. I
-      write about my experiences and share my projects." />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -52,4 +51,28 @@ const { title } = Astro.props;
       scroll-behavior: auto;
     }
   }
+
+  #header-nav {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+    z-index: 10;
+  }
+
+  @keyframes blur {
+    to {
+      box-shadow:
+      0px 5px 50px -5px hsla(0, 0%, 100%, 0.5),
+      0px 0px 0 1px hsla(0, 0%, 100%, 0.5);
+      background: rgba(80, 79, 79, 0.3);
+      backdrop-filter: blur(50px);
+      color: rgb(245, 245, 245);
+    }
+  }
+
+  div p strong {
+    font-weight: 600;
+    color: rgb(34, 197, 94)
+  }
+
 </style>
