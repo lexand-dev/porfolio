@@ -5,6 +5,11 @@ import TagBadge from './TagBadge.astro';
 import EmailIcon from './icons/Email.astro';
 import GithubIcon from './icons/Github.astro';
 import LinkedInIcon from './icons/LinkedIn.astro';
+
+import { getI18N } from "../i18n/";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <header class="
@@ -37,12 +42,13 @@ import LinkedInIcon from './icons/LinkedIn.astro';
 					</span>
 				</h1>
 				<Badge href='https://www.linkedin.com/in/alexander-flores-rayme-727545165/'>
-					Disponible para trabajar
+					{ i18n.HERO_BADGE }
 				</Badge>
 				<p class="p-0 mt-3 font-semibold">Lima, Perú</p>
-				<p class="text-gray-600 my-4 w-[325px] md:w-96 text-left text-pretty">
-					<span class="font-semibold">+3 años</span> de experiencia como <span class="text-green-500 font-semibold">Frontend Developer y UI Designer</span>. Soy una persona responsable y autodidacta, me gusta escuchar musica, leer documentación sobre diferentes tecnologías del mercado y en mis ratos libres me gusta hacer ejercicio y leer libros.
-				</p>
+				<p 
+					set:html={i18n.HERO_ABOUT} 
+					class="text-gray-600 my-4 w-[325px] md:w-96 text-left text-pretty" 
+				/>
 					<nav class="flex my-6 gap-6 md:gap-8">
 						<SocialPill href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/" >
 							<LinkedInIcon class="" />
