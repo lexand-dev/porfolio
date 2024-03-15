@@ -43,7 +43,7 @@
       "link": "https://landing-masterclasss.vercel.app",
       "github": "",
       "image": "/projects/project-1.webp",
-      "tags": ["NEXT", "TAILWIND", "TAILWIND"]
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
     },
     {
       "title": "Taskify App",
@@ -51,7 +51,7 @@
       "link": "https://landing-masterclasss.vercel.app",
       "github": "",
       "image": "/projects/project-2.webp",
-      "tags": ["NEXT", "TAILWIND", "TAILWIND"]
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
     }
   ],
 

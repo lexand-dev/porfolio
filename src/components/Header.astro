@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from "./ThemeToggle.astro";
+
 import { getI18N } from "../i18n";
 
 const { currentLocale } = Astro;
@@ -86,11 +88,10 @@ const i18n = getI18N({ currentLocale });
         {i18n.NAV_EN}
       </a>
     </li>
-    <!--     <li class="transition
-			hover:scale-110
-		hover:bg-white/10">
-      <a href="/blog">Blogs</a>
-    </li> -->
+    <li class="text-xl transition
+			hover:scale-110">
+      <ThemeToggle />
+    </li>
     <!-- 			<li>
 				<a
 					target="_blank"

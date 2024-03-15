@@ -39,7 +39,7 @@ const { badge, about, country } = Astro.props;
 				md:text-left"
   >
     <h1
-      class="text-6xl font-mansalva font-bold text-gray-800 flex flex-col pb-6"
+      class="text-6xl dark:text-gray-300 font-mansalva font-bold flex flex-col pb-6"
     >
       Alexander
       <span class="text-green-500"> Flores rayme </span>
@@ -50,21 +50,21 @@ const { badge, about, country } = Astro.props;
     <p class="p-0 mt-3 font-semibold">{country}</p>
     <p
       set:html={about}
-      class="text-gray-600 my-4 max-w-[590px] text-left text-pretty"
+      class="text-gray-600 dark:text-gray-300 my-4 max-w-[590px] text-left text-pretty"
     />
-    <nav class="flex my-6 gap-6 md:gap-8">
+    <nav class="flex flex-wrap gap-4 mt-8">
       <SocialPill
         href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/"
       >
-        <LinkedInIcon class="" />
+        <LinkedInIcon class="size-4" />
         LinkedIn
       </SocialPill>
       <SocialPill href="https://github.com/lexand-dev">
-        <GithubIcon />
+        <GithubIcon class="size-4" />
         Github
       </SocialPill>
       <SocialPill href="mailto:alexfloresrayme@gmail.com">
-        <EmailIcon />
+        <EmailIcon class="size-4" />
         Email
       </SocialPill>
     </nav>

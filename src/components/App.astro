@@ -1,6 +1,7 @@
 ---
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
 
 import AsideCard from "../components/AsideCard.astro";
 import AsideSection from "../components/AsideSection.astro";
@@ -9,11 +10,12 @@ import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
+
 import ViewMore from "../components/ViewMore.astro";
 import Briefcase from "../components/icons/BriefCase.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import ToolsIcon from "../components/icons/Tools.astro";
-import Layout from "../layouts/Layout.astro";
+import GlowSection from "../components/react/GlowSection";
 
 import { getI18N } from "../i18n";
 
@@ -43,7 +45,7 @@ const i18n = getI18N({ currentLocale });
           <Experience data={i18n.EXPERIENCE_ITEMS} />
         </SectionContainer>
 
-        <SectionContainer id="projects">
+        <SectionContainer id="projects" class="pt-16">
           <SectionTitle class="text-2xl md:text-3xl font-semibold py-4 mb-6">
             <span>
               <CodeIcon class="inline-block size-8 mr-2" />
@@ -67,7 +69,7 @@ const i18n = getI18N({ currentLocale });
           </div>
         </SectionContainer>
 
-        <SectionContainer id="skills">
+        <SectionContainer id="skills" class="pt-16">
           <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
             <span>
               <ToolsIcon class="inline-block size-8 mr-2" />
@@ -75,9 +77,10 @@ const i18n = getI18N({ currentLocale });
             Skills
           </SectionTitle>
           <Skills />
+          <GlowSection client:visible />
         </SectionContainer>
 
-        <SectionContainer id="contacto">
+        <SectionContainer id="contacto" class="pt-16">
           <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
             <span>
               <ToolsIcon class="inline-block size-8 mr-2" />
@@ -95,7 +98,6 @@ const i18n = getI18N({ currentLocale });
         </SectionContainer>
       </div>
       <AsideSection id="aside-section" class="flex flex-col space-y-8">
-        <AsideCard />
         <AsideCard />
       </AsideSection>
     </div>

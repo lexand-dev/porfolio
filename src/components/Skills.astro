@@ -6,7 +6,7 @@ import MySQL from "./tools/MySQL.astro";
 import Notion from "./tools/Notion.astro";
 import OpenAI from "./tools/OpenAI.astro";
 import Sass from "./tools/Sass.astro";
-const TAGS = [  
+const TAGS = [
   {
     name: "HTML5",
     class: "text-black bg-orange-300",
@@ -28,12 +28,12 @@ const TAGS = [
     Icon: Sass,
   },
   {
-    name: "My SQL",
+    name: "MySQL",
     class: "text-black bg-blue-300",
     Icon: MySQL,
   },
   {
-    name: "Open AI",
+    name: "OpenAI",
     class: "text-black bg-green-300",
     Icon: OpenAI,
   },
@@ -41,28 +41,27 @@ const TAGS = [
     name: "Notion",
     class: "text-black bg-gray-300",
     Icon: Notion,
-  }
-]
+  },
+];
 ---
 
-<ul class="
-  w-[fit-content]
-  mb-2 
-  flex 
-  flex-wrap 
+<ul class="w-full
+  mb-2
+  flex
+  flex-wrap
   gap-x-4
-  gap-y-2 
-  md:flex-row 
-  md:flex-nowrap 
-">
-  {TAGS.map(({name, class: classValue, Icon}) => (
-    <li class="f">
-      <span
-        class={`flex justify-center items-center gap-x-2 rounded-full text-xs ${classValue} py-1 px-3`}
-      >
-        <Icon class="size-5" />
-        {name}
-      </span>
-    </li>
-  ))}
+  gap-y-2
+  md:flex-row">
+  {
+    TAGS.map(({ name, class: classValue, Icon }) => (
+      <li class="">
+        <span
+          class={`flex justify-center items-center gap-x-2 rounded-3xl text-xs ${classValue} py-1 px-3`}
+        >
+          <Icon class="size-5" />
+          {name}
+        </span>
+      </li>
+    ))
+  }
 </ul>
