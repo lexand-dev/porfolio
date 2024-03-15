@@ -1,22 +1,40 @@
+---
+import SocialPill from "./SocialPill.astro";
+import GithubIcon from "./icons/Github.astro";
+import InstagramIcon from "./icons/Instagram.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
 <footer
-  class="rounded-lg shadow m-4 bg-black/10 backdrop-blur-md w-full md:w-[780px] mx-auto mb-10"
+  class="rounded-lg shadow m-4 bg-black/10 backdrop-blur-md w-full md:max-w-[1072px] mx-auto mb-10"
 >
   <div
-    class="w-full mx-auto max-w-[780px] p-4 md:flex md:items-center md:justify-between"
+    class="w-full mx-auto p-4 md:flex md:items-center md:justify-between px-4 md:px-8"
   >
-    <span class="text-sm sm:text-center text-green-500"
-      >© 2023 <a href="https://midu.dev/" class="hover:underline">Lexand-dev</a>.
-      Casi todos los derechos reservados
+    <span class="text-sm sm:text-center text-green-500">
+      {i18n.FOOTER_COPYRIGHT}
     </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium text-black/90 sm:mt-0"
+    <nav
+      class="flex flex-wrap items-center mt-3 text-sm font-medium text-black/90 sm:mt-0 gap-x-2"
     >
-      <li>
-        <a href="sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/" class="hover:underline">Contacto</a>
-      </li>
-    </ul>
+      <SocialPill
+        href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/"
+      >
+        <LinkedInIcon />
+      </SocialPill>
+      <SocialPill href="https://github.com/lexand-dev">
+        <GithubIcon />
+      </SocialPill>
+      <SocialPill
+        href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/"
+      >
+        <InstagramIcon />
+      </SocialPill>
+    </nav>
   </div>
 </footer>

@@ -1,19 +1,23 @@
 ---
-import Badge from './Badge.astro';
-import SocialPill from './SocialPill.astro';
-import TagBadge from './TagBadge.astro';
-import EmailIcon from './icons/Email.astro';
-import GithubIcon from './icons/Github.astro';
-import LinkedInIcon from './icons/LinkedIn.astro';
+import Badge from "./Badge.astro";
+import SocialPill from "./SocialPill.astro";
+import TagBadge from "./TagBadge.astro";
+import EmailIcon from "./icons/Email.astro";
+import GithubIcon from "./icons/Github.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
 
-import { getI18N } from "../i18n/";
+interface Props {
+  badge: string;
+  about: string;
+  country: string;
+}
 
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const { badge, about, country } = Astro.props;
 ---
 
-<header class="
-			flex
+<header
+  class="w-full
+      flex
 			flex-col
 			items-center
 			justify-center
@@ -21,65 +25,62 @@ const i18n = getI18N({ currentLocale });
 			space-y-4
 			md:flex-row
 			md:space-y-0
-			md:space-x-4
+			md:space-x-8
 			md:items-start
-			md:justify-start
-		">
-			<div class="
-				flex
+			md:justify-start"
+>
+  <div
+    class="max-w-[700px]
+        flex
 				flex-col
 				items-center
 				md:items-start
-				max-w-2xl
-				mx-auto
 				text-center
-				md:text-left
-			">
-				<h1 class="text-6xl font-mansalva font-bold text-gray-800 flex flex-col pb-6">
-					Alexander
-					<span class="text-green-500">
-						Flores rayme
-					</span>
-				</h1>
-				<Badge href='https://www.linkedin.com/in/alexander-flores-rayme-727545165/'>
-					{ i18n.HERO_BADGE }
-				</Badge>
-				<p class="p-0 mt-3 font-semibold">Lima, Perú</p>
-				<p 
-					set:html={i18n.HERO_ABOUT} 
-					class="text-gray-600 my-4 w-[325px] md:w-96 text-left text-pretty" 
-				/>
-					<nav class="flex my-6 gap-6 md:gap-8">
-						<SocialPill href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/" >
-							<LinkedInIcon class="" />
-							LinkedIn
-						</SocialPill>
-						<SocialPill href="https://github.com/lexand-dev">
-							<GithubIcon />
-							Github
-						</SocialPill>
-						<SocialPill href="mailto:alexfloresrayme@gmail.com">
-							<EmailIcon />
-							Email
-						</SocialPill>
-
-					</nav>
-					<div class="pt-10">
-						<TagBadge />
-					</div>
-			</div>
-			<div
-				class="
-					py-4
-				"
-			>
-				<img 
-					src="/img/profile.webp" 
-					alt="hero" 
-					class="
-						rounded-lg
+				md:text-left"
+  >
+    <h1
+      class="text-6xl font-mansalva font-bold text-gray-800 flex flex-col pb-6"
+    >
+      Alexander
+      <span class="text-green-500"> Flores rayme </span>
+    </h1>
+    <Badge href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/">
+      {badge}
+    </Badge>
+    <p class="p-0 mt-3 font-semibold">{country}</p>
+    <p
+      set:html={about}
+      class="text-gray-600 my-4 max-w-[590px] text-left text-pretty"
+    />
+    <nav class="flex my-6 gap-6 md:gap-8">
+      <SocialPill
+        href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/"
+      >
+        <LinkedInIcon class="" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="https://github.com/lexand-dev">
+        <GithubIcon />
+        Github
+      </SocialPill>
+      <SocialPill href="mailto:alexfloresrayme@gmail.com">
+        <EmailIcon />
+        Email
+      </SocialPill>
+    </nav>
+  </div>
+  <div class="py-4 flex flex-col items-center">
+    <div>
+      <img
+        src="/img/profile.webp"
+        alt="hero"
+        class="rounded-lg
 						md:max-w-[400px]
-						md:h-[550px]
-					">
-			</div>
-		</header>
+						md:h-[380px]"
+      />
+    </div>
+    <div class="pt-10">
+      <TagBadge />
+    </div>
+  </div>
+</header>

@@ -1,12 +1,17 @@
 ---
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
 interface Props {
-  title: string
-  description: string
-  link?: string
-  date: string
+  title: string;
+  description: string;
+  link?: string;
+  date: string;
 }
 
-const { title, description, link, date } = Astro.props
+const { title, description, link, date } = Astro.props;
 ---
 
 <div
@@ -33,7 +38,7 @@ const { title, description, link, date } = Astro.props
     transition
     hover:scale-110 hover:bg-white/10"
     >
-      Saber más...{" "}
+      {i18n.EXPERIENCE_MORE_VIEW_LINK}{" "}
       <svg
         class="w-3 h-3 ms-2 rtl:rotate-180"
         aria-hidden="true"

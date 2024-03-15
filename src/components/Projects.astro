@@ -4,6 +4,11 @@ import LinkIcon from "./icons/Link.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -11,109 +16,69 @@ const TAGS = {
     icon: NextJS,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class: "text-black",
     icon: Tailwind,
   },
-}
-const PROJECTS = [
-  {
-    title: "Masterclass - plataforma de cursos online",
-    description:
-      "Created from scratch with React and Tailwind CSS. It's a web application to sell online courses. Optimized for SEO and performance.",
-    link: "https://landing-masterclasss.vercel.app",
-    github: "https://github.com/lexand-dev/Landing-Masterclasss",
-    image: "/projects/project-1.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Japan Travel - Beautiful Web Design",
-    description:
-      "Created from scratch with Astro and Tailwind CSS. It's a web application to travel to Japan. Optimized for SEO and performance, it has images in webp format.",
-    link: "https://travel-website-blog-anime-manga-food.vercel.app",
-    github: "https://github.com/lexand-dev/Travel-Website-blog-anime-manga-food",
-    image: "/projects/project-2.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Nike - Nike website",
-    description:
-      "Created from scratch with React + Vite and Tailwind CSS. It's a web application to sell Nike products. Optimized for SEO and performance. It has a dark mode. It has a shopping cart.",
-    link: "https://nike-landing-web.vercel.app/",
-    github: "https://github.com/lexand-dev/nike-landing-web",
-    image: "/projects/project-3.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Netflix - Netflix clone",
-    description:
-      "Created from scratch with Next.js and Tailwind CSS. It's a web application to watch movies and series. Data is fetched from MongoDB and prisma ORM. Optimized for SEO and performance.",
-    link: "https://netflix-clone-19n0ywqs2-lexand-dev.vercel.app/auth",
-    github: "https://github.com/lexand-dev/netflix-clone",
-    image: "/projects/project-4.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-]
+};
+const PROJECTS = i18n.PROJECTS_ITEMS.map((project) => ({
+  ...project,
+  tags: project.tags.map((tag) => TAGS[tag as keyof typeof TAGS]),
+}));
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="rounded-2xl border border-black p-10 w-[350px]">
-      <div class="absolute top-[2450px] sm:top-[2638px] md:top-[1712px] lg:top-[1688px] z-[-2] h-96 w-[350px] bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,255,0,0.13)_0,rgba(0,255,0,0)_50%,rgba(0,255,0,0)_100%)]"></div>
-      <h3 class="text-2xl font-semibold text-green-500 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      
-      <img
-        loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 aspect-auto pb-5"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-      <div class="flex flex-col gap-y-2">
-        <ul class="flex gap-x-2 flex-row mb-2">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex justify-center items-center gap-x-2 rounded-full bg-slate-100 text-xs ${tag.class} py-1 px-3`}
+<div class="grid gap-5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="rounded-xl border border-black py-4 px-6 max-w-[280px]">
+        <h3 class="text-xl font-semibold text-green-500 mb-2">{title}</h3>
+        <p class="text-sm mb-4 text-pretty">{description}</p>
+
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-auto pb-5"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+        <div class="flex flex-col gap-y-2">
+          <ul class="flex gap-2 flex-wrap mb-2">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex justify-center items-center gap-x-2 rounded-full bg-slate-100 text-xs ${tag.class} py-1 px-2`}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex justify-between px-2">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
+              hover:scale-105 transform"
             >
-              <tag.icon class="size-5" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <div class="flex">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
-            hover:scale-105 transform"
-        >
-        <span class="block">
-          <LinkIcon class="size-5 inline-block" />
-        </span>
-          <p class="block">
-            Ver proyecto
-          </p>
-        </a>
-        <span class="mx-2">|</span>
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
-            hover:scale-105 transform"
-        >
-        <span>
-          <Github class="size-6 inline-block" />
-        </span>
-          Ver código
-        </a>
-      </div>
-
-      </div>
-
-    </article>
-  ))
-}
+              <span class="block">
+                <LinkIcon class="size-7 inline-block" />
+              </span>
+            </a>
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
+              hover:scale-105 transform"
+            >
+              <span>
+                <Github class="size-7 inline-block" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

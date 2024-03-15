@@ -2,7 +2,71 @@
   "SEO_TITLE": "Lexand dev | Frontend developer | Alexander Flores",
   "SEO_DESCRIPTION": "Frontend developer with experience in web and mobile applications. I love learning new technologies and sharing my knowledge with the community. Committed to clean code and continuous improvement.",
 
+  "NAV_EXPERIENCE": "EXPERIENCE",
+  "NAV_PROJECTS": "PROJECTS",
+  "NAV_ABOUT": "ABOUT",
+  "NAV_CONTACT": "CONTACT",
+  "NAV_RESUME": "RESUME",
+  "NAV_EN": "ES",
+  "NAV_EN_LINK": "/",
+
   "HERO_TITLE": "Hello, I'm Alexander Flores",
   "HERO_BADGE": "Available for work",
-  "HERO_ABOUT": "<strong>+3 years</strong> of experience as <strong>Frontend Developer and UI Designer</strong>. I am a responsible and self-taught person, I like to listen to music, read documentation on different technologies in the market and in my free time I like to exercise and read books."
+  "HERO_COUNTRY": "Lima - Peru",
+  "HERO_ABOUT": "Hey there, I'm Alexander, a <strong>FullStack Developer</strong> with a background in <strong>UI Design</strong>. I specialize in creating seamless and intuitive user experiences that are driven by empathy and supported by modern tech stacks.",
+
+  "STACK_TITLE": "Modern Web Stack",
+  "STACK_DESCRIPTION": "Experienced in functional and OOP languages, I mainly prefer to use ES6 and ReactJS on my frontend projects. Despite being involved in Bootstrap and Material UI projects in the past, my current preference has been towards TailwindCSS in projects.",
+
+  "EXPERIENCE_TITLE": "Experience",
+  "EXPERIENCE_MORE_VIEW_LINK": "View more...",
+  "EXPERIENCE_ITEMS": [
+    {
+      "date": "September 2023 - Present",
+      "title": "Full Stack Developer − Xtal Studio",
+      "description": "Responsible for the platform, components and utilities for the creation and development of an E-commerce. 30% improvement in software delivery. Implementation of continuous integration and deployment measures with A/B testing. Deployment of the platform on AWS. SEO improvement. Implementation of load and performance optimization measures. Greater visibility in search engines.",
+      "link": "https://xtal.com"
+    },
+    {
+      "date": "September 2023",
+      "title": "Frontend Developer − Fotex",
+      "description": "Responsible for the platform, components and utilities for the creation and development of the Web Blog. SEO improvement. Implementation of load and performance optimization measures. Greater visibility in search engines.",
+      "link": "https://fotex.com"
+    }
+  ],
+
+  "PROJECTS_TITLE": "Projects",
+  "PROJECTS_ITEMS": [
+    {
+      "title": "LMS Platform",
+      "description": "Created from scratch with React and Tailwind CSS. It's a web application to sell online courses. Optimized for SEO and performance.",
+      "link": "https://landing-masterclasss.vercel.app",
+      "github": "",
+      "image": "/projects/project-1.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    },
+    {
+      "title": "Taskify App",
+      "description": "Creado desde cero con React y Tailwind CSS. Es una aplicación web para vender cursos en línea. Optimizado para SEO y rendimiento.",
+      "link": "https://landing-masterclasss.vercel.app",
+      "github": "",
+      "image": "/projects/project-2.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    }
+  ],
+
+  "CERTIFICATION_TITLE": "Certifications",
+  "CERTIFICACION_ITEMS": [
+    {
+      "TITLE": "Ingeniería de Sistemas",
+      "INSTITUTION": "Universidad Nacional de Ingeniería",
+      "DATE": "2018 - 2023",
+      "DESCRIPTION": "Estudios en la facultad de Ingeniería de Sistemas, con especialización en desarrollo de software."
+    }
+  ],
+
+  "CONTACT_TITLE": "Contact me",
+  "CONTACT_MESSAGE": "If you have any questions or want to work with me, do not hesitate to contact me.",
+
+  "FOOTER_COPYRIGHT": "© 2023 Lexand dev | Alexander Flores. All rights reserved."
 }

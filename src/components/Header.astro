@@ -1,70 +1,97 @@
-<header id="header-nav" class={`
+---
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<header
+  class={`
 		w-screen
 		fixed
 		flex
-		justify-between
+		justify-center
 		items-center
+		gap-x-48
 		px-5
 		py-4
 		md:px-4
 		lg:px-14
+		z-10
 	`}
-	{...Astro.props}
-	>
-		<h1 class="
-			md:text-xl
-			lg:text-2xl
+  {...Astro.props}
+>
+  <h1
+    class="header-nav md:text-xl
+			lg:text-xl
 			font-bold
-			text-gray-800
-		">
-			<a href="/">&lt;Lexand-dev/&gt;</a>
-		</h1>
+      px-2
+      py-1
+			text-gray-800"
+  >
+    <a href="/">
+      <img
+        width="48"
+        height="48"
+        src="https://img.icons8.com/doodle/48/tetra-pak--v1.png"
+        alt="tetra-pak--v1"
+      />
+    </a>
+  </h1>
 
-		<nav
+  <nav
     class={`
+    header-nav
 			hidden
       px-2 py-1
       md:flex flex-row
 			md:text-xs
 			lg:text-lg
+			rounded-2xl
+			bg-black/10
     `}
   >
     <a
       class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
-      href="#experiencia">Experiencia</a
+      href="#experiencia"
     >
-    <a class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition" href="#proyectos"
-      >Proyectos</a
+      {i18n.NAV_EXPERIENCE}
+    </a>
+    <a
+      class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
+      href="#proyectos"
     >
-    <a class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition" href="#sobre-mi"
-      >Sobre mí</a
+      {i18n.NAV_PROJECTS}
+    </a>
+    <a
+      class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
+      href="#sobre-mi"
     >
-    <a class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition" href="#contacto"
-      >Contacto</a
+      {i18n.NAV_ABOUT}
+    </a>
+    <a
+      class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
+      href="#contacto"
     >
+      {i18n.NAV_CONTACT}
+    </a>
   </nav>
 
-		<ul class="hidden md:flex md:gap-6 md:items-center md:font-semibold">
-			<li class="
-			md:text-green-500 text-xl transition
-			hover:scale-110 
+  <ul
+    class="hidden header-nav md:flex md:gap-6 md:items-center md:font-semibold p-2"
+  >
+    <li class="text-xl transition
+			hover:scale-110">
+      <a href={i18n.NAV_EN_LINK}>
+        {i18n.NAV_EN}
+      </a>
+    </li>
+    <!--     <li class="transition
+			hover:scale-110
 		hover:bg-white/10">
-				<a href="/curriculum">CV</a>
-			</li>
-			<li class="transition
-			hover:scale-110 
-		hover:bg-white/10">
-				<a
-					target="_blank"
-					rel="noopener noreferrer" 
-					href="https://github.com/lexand-dev">Github</a>
-			</li>
-			<li class="transition
-			hover:scale-110 
-		hover:bg-white/10">
-				<a href="/blog">Blogs</a>
-			</li>	
-<!-- 			<li>
+      <a href="/blog">Blogs</a>
+    </li> -->
+    <!-- 			<li>
 				<a
 					target="_blank"
 					rel="noopener noreferrer" 
@@ -72,12 +99,21 @@
 					<Spotify />
 				</a>
 			</li> -->
-		</ul>
+  </ul>
 
-		<button class="md:hidden">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-			</svg>			
-		</button>
-    
-	</header>
+  <!-- <button class="md:hidden">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+    </svg>
+  </button> -->
+</header>
