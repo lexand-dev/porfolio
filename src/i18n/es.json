@@ -16,21 +16,21 @@
   "HERO_ABOUT": "Hola, soy Alexander, desarrollador <strong>FullStack</strong> con experiencia en <strong>Diseño UI</strong>. Me especializo en crear experiencias de usuario fluidas e intuitivas impulsadas por la empatía y respaldadas por tecnologías <strong>modernas.</strong>",
 
   "STACK_TITLE": "Modern Web Stack",
-  "STACK_DESCRIPTION": "Con experiencia en lenguajes funcionales y OOP, prefiero principalmente usar ES6 y ReactJS en mis proyectos frontend. A pesar de haber estado involucrado en proyectos Bootstrap y Material UI en el pasado, mi preferencia actual ha sido TailwindCSS en proyectos.",
+  "STACK_DESCRIPTION": "Con experiencia en lenguajes funcionales y OOP, prefiero principalmente usar ES6 y ReactJS en mis proyectos frontend. A pesar de haber estado involucrado en proyectos con Sass y ChakraUI en el pasado, mi preferencia actual ha sido TailwindCSS en proyectos.",
 
   "EXPERIENCE_TITLE": "Experiencia laboral",
   "EXPERIENCE_MORE_VIEW_LINK": "Ver más...",
   "EXPERIENCE_ITEMS": [
     {
       "date": "Actualmente...",
-      "title": "Full Stack Developer − Xtal Studio",
-      "description": "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de un E-commerce. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing. Despliegue de la plataforma en AWS. Mejora del SEO. Implementación de medidas de optimización de carga y rendimiento. Mayor visibilidad en buscadores",
+      "title": "Full Stack Developer − Freelance",
+      "description": "Desarrollo de aplicaciones web y móviles. Diseño de interfaces de usuario con Figma. Desarrollo de aplicaciones web con Next.js y Astro. Desarrollo de aplicaciones móviles con React Native y Flutter",
       "link": "https://xtal.com"
     },
     {
       "date": "Septiembre 2023",
-      "title": "Frontend Developer − Fotex",
-      "description": "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo del Blog Web. Mejora del SEO. Implementación de medidas de optimización de carga y rendimiento. Mayor visibilidad en buscadores.",
+      "title": "Full Stack Developer − Xtal Studio",
+      "description": "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de un E-commerce. Implantación de medidas de integración continua y despliegue con A/B testing. Despliegue de la plataforma. Mejora del SEO. Implementación de medidas de optimización de carga y rendimiento. Mayor visibilidad en buscadores",
       "link": "https://xtal.com"
     }
   ],
@@ -38,7 +38,7 @@
   "PROJECTS_TITLE": "Proyectos",
   "PROJECTS_ITEMS": [
     {
-      "title": "LMS Platform",
+      "title": "Masterclass App - E-learning platform",
       "description": "Creado desde cero con React y Tailwind CSS. Es una aplicación web para vender cursos en línea. Optimizado para SEO y rendimiento.",
       "link": "https://landing-masterclasss.vercel.app",
       "github": "",
@@ -46,11 +46,35 @@
       "tags": ["NEXT", "TAILWIND", "PRISMA"]
     },
     {
-      "title": "Taskify App",
-      "description": "Creado desde cero con React y Tailwind CSS. Es una aplicación web para vender cursos en línea. Optimizado para SEO y rendimiento.",
+      "title": "Taskify App - Trello clone",
+      "description": "Aplicación web para gestionar tareas y proyectos. Creada con NextJS y Tailwind CSS. Incluye autenticación y base de datos en tiempo real.",
+      "link": "https://trello-power-clone.vercel.app/",
+      "github": "",
+      "image": "/projects/trello-power.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    },
+    {
+      "title": "Design System - Xtal",
+      "description": "Un Design System para la empresa Xtal Studio. Creado con Storybook y Tailwind CSS. Incluye componentes y estilos personalizados.",
       "link": "https://landing-masterclasss.vercel.app",
       "github": "",
-      "image": "/projects/project-2.webp",
+      "image": "/projects/project-3.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    },
+    {
+      "title": "E-commerce - Dashboard & CMS",
+      "description": "Un Design System para la empresa Xtal Studio. Creado con Storybook y Tailwind CSS. Incluye componentes y estilos personalizados.",
+      "link": "https://landing-masterclasss.vercel.app",
+      "github": "",
+      "image": "/projects/project-3.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    },
+    {
+      "title": "SaaS AI Platform",
+      "description": "Un Design System para la empresa Xtal Studio. Creado con Storybook y Tailwind CSS. Incluye componentes y estilos personalizados.",
+      "link": "https://landing-masterclasss.vercel.app",
+      "github": "",
+      "image": "/projects/project-3.webp",
       "tags": ["NEXT", "TAILWIND", "PRISMA"]
     }
   ],
