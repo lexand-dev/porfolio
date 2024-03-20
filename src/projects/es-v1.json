@@ -13,7 +13,7 @@
   "HERO_TITLE": "Hola, soy Alexander Flores",
   "HERO_BADGE": "Disponible para trabajar",
   "HERO_COUNTRY": "LIMA, PERÚ",
-  "HERO_ABOUT": "Hola, soy Alexander, desarrollador <strong>Frontend</strong> con experiencia en <strong>Diseño UI</strong>. Me especializo en crear experiencias de usuario fluidas e intuitivas impulsadas por la empatía y respaldadas por tecnologías <strong>modernas.</strong>",
+  "HERO_ABOUT": "Hola, soy Alexander, desarrollador <strong>FullStack</strong> con experiencia en <strong>Diseño UI</strong>. Me especializo en crear experiencias de usuario fluidas e intuitivas impulsadas por la empatía y respaldadas por tecnologías <strong>modernas.</strong>",
 
   "STACK_TITLE": "Modern Web Stack",
   "STACK_DESCRIPTION": "Con experiencia en lenguajes funcionales y OOP, prefiero principalmente usar ES6 y ReactJS en mis proyectos frontend. A pesar de haber estado involucrado en proyectos con Sass y ChakraUI en el pasado, mi preferencia actual ha sido TailwindCSS en proyectos.",
@@ -38,28 +38,44 @@
   "PROJECTS_TITLE": "Proyectos",
   "PROJECTS_ITEMS": [
     {
-      "title": "Masterclass Landing - E-learning platform",
+      "title": "Masterclass App - E-learning platform",
       "description": "Creado desde cero con React y Tailwind CSS. Es una aplicación web para vender cursos en línea. Optimizado para SEO y rendimiento.",
       "link": "https://landing-masterclasss.vercel.app",
-      "github": "https://github.com/lexand-dev/Landing-Masterclasss",
+      "github": "",
       "image": "/projects/project-1.webp",
-      "tags": ["REACT", "TAILWIND"]
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
     },
     {
       "title": "Taskify App - Trello clone",
       "description": "Aplicación web para gestionar tareas y proyectos. Creada con NextJS y Tailwind CSS. Incluye autenticación y base de datos en tiempo real.",
       "link": "https://trello-power-clone.vercel.app/",
-      "github": "https://github.com/lexand-dev/trello-power-clone",
+      "github": "",
       "image": "/projects/trello-power.webp",
       "tags": ["NEXT", "TAILWIND", "PRISMA"]
     },
     {
-      "title": "Podia Web - Landing Responsive",
-      "description": "Landing page Creada con Astro y Tailwind CSS. Optimizada para SEO y rendimiento en dispositivos móviles.",
-      "link": "https://podia-sell-web.vercel.app/",
-      "github": "https://github.com/lexand-dev/podia-sell-web",
-      "image": "/projects/podia.webp",
-      "tags": ["ASTROICON", "TAILWIND", "TAILWIND"]
+      "title": "Design System - Xtal",
+      "description": "Un Design System para la empresa Xtal Studio. Creado con Storybook y Tailwind CSS. Incluye componentes y estilos personalizados.",
+      "link": "https://landing-masterclasss.vercel.app",
+      "github": "",
+      "image": "/projects/project-3.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    },
+    {
+      "title": "E-commerce - Dashboard & CMS",
+      "description": "Un Design System para la empresa Xtal Studio. Creado con Storybook y Tailwind CSS. Incluye componentes y estilos personalizados.",
+      "link": "https://landing-masterclasss.vercel.app",
+      "github": "",
+      "image": "/projects/project-3.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    },
+    {
+      "title": "SaaS AI Platform",
+      "description": "Un Design System para la empresa Xtal Studio. Creado con Storybook y Tailwind CSS. Incluye componentes y estilos personalizados.",
+      "link": "https://landing-masterclasss.vercel.app",
+      "github": "",
+      "image": "/projects/project-3.webp",
+      "tags": ["NEXT", "TAILWIND", "PRISMA"]
     }
   ],
 

@@ -38,20 +38,28 @@
   "PROJECTS_TITLE": "Projects",
   "PROJECTS_ITEMS": [
     {
-      "title": "LMS Platform",
-      "description": "Created from scratch with React and Tailwind CSS. It's a web application to sell online courses. Optimized for SEO and performance.",
-      "link": "https://landing-masterclasss.vercel.app",
-      "github": "",
-      "image": "/projects/project-1.webp",
-      "tags": ["NEXT", "TAILWIND", "PRISMA"]
-    },
-    {
-      "title": "Taskify App",
+      "title": "Masterclass App - E-learning platform",
       "description": "Creado desde cero con React y Tailwind CSS. Es una aplicación web para vender cursos en línea. Optimizado para SEO y rendimiento.",
       "link": "https://landing-masterclasss.vercel.app",
       "github": "",
-      "image": "/projects/project-2.webp",
+      "image": "/projects/project-1.webp",
+      "tags": ["REACT", "TAILWIND"]
+    },
+    {
+      "title": "Taskify App - Trello clone",
+      "description": "Aplicación web para gestionar tareas y proyectos. Creada con NextJS y Tailwind CSS. Incluye autenticación y base de datos en tiempo real.",
+      "link": "https://trello-power-clone.vercel.app/",
+      "github": "",
+      "image": "/projects/trello-power.webp",
       "tags": ["NEXT", "TAILWIND", "PRISMA"]
+    },
+    {
+      "title": "Podia Web - Landing Responsive",
+      "description": "Landing page para vender cursos en línea. Creada con Astro y Tailwind CSS. Optimizada para SEO y rendimiento en dispositivos móviles.",
+      "link": "https://podia-sell-web.vercel.app/",
+      "github": "",
+      "image": "/projects/trello-power.webp",
+      "tags": ["ASTROICON", "TAILWIND", "TAILWIND"]
     }
   ],
 

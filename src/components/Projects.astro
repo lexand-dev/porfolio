@@ -4,6 +4,10 @@ import LinkIcon from "./icons/Link.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 
+import AstroIcon from "./icons/Astro.astro";
+import Prisma from "./icons/Prisma.astro";
+import React from "./icons/React.astro";
+
 import { getI18N } from "../i18n";
 
 const { currentLocale } = Astro;
@@ -21,9 +25,19 @@ const TAGS = {
     icon: Tailwind,
   },
   PRISMA: {
-    name: "Tailwind",
+    name: "Prisma",
     class: "text-black",
-    icon: Tailwind,
+    icon: Prisma,
+  },
+  REACT: {
+    name: "React",
+    class: "text-black",
+    icon: React,
+  },
+  ASTROICON: {
+    name: "Astro",
+    class: "text-black",
+    icon: AstroIcon,
   },
 };
 const PROJECTS = i18n.PROJECTS_ITEMS.map((project) => ({
