@@ -1,23 +1,17 @@
 {
   "SEO_TITLE": "Lexand dev | Desarrollador frontend | Alexander Flores",
   "SEO_DESCRIPTION": "Desarrollador frontend con experiencia en aplicaciones web y móviles. Me encanta aprender nuevas tecnologías y compartir mis conocimientos con la comunidad. Comprometido con el código limpio y la mejora continua.",
-
   "NAV_EXPERIENCE": "EXPERIENCIA",
   "NAV_PROJECTS": "PROYECTOS",
   "NAV_ABOUT": "SOBRE MÍ",
   "NAV_CONTACT": "CONTACTO",
   "NAV_RESUME": "CV",
-  "NAV_EN": "EN",
+  "NAV_EN": "ES",
   "NAV_EN_LINK": "/en",
-
   "HERO_TITLE": "Hola, soy Alexander Flores",
   "HERO_BADGE": "Disponible para trabajar",
   "HERO_COUNTRY": "LIMA, PERÚ",
   "HERO_ABOUT": "Hola, soy Alexander, desarrollador <strong>Frontend</strong> con experiencia en <strong>Diseño UI</strong>. Me especializo en crear experiencias de usuario fluidas e intuitivas impulsadas por la empatía y respaldadas por tecnologías <strong>modernas.</strong>",
-
-  "STACK_TITLE": "Modern Web Stack",
-  "STACK_DESCRIPTION": "Con experiencia en lenguajes funcionales y OOP, prefiero principalmente usar ES6 y ReactJS en mis proyectos frontend. A pesar de haber estado involucrado en proyectos con Sass y ChakraUI en el pasado, mi preferencia actual ha sido TailwindCSS en proyectos.",
-
   "EXPERIENCE_TITLE": "Experiencia laboral",
   "EXPERIENCE_MORE_VIEW_LINK": "Ver más...",
   "EXPERIENCE_ITEMS": [
@@ -34,35 +28,38 @@
       "link": "https://xtal.com"
     }
   ],
-
   "PROJECTS_TITLE": "Proyectos",
   "PROJECTS_ITEMS": [
     {
       "title": "Masterclass Landing - E-learning platform",
-      "description": "Creado desde cero con React y Tailwind CSS. Es una aplicación web para vender cursos en línea. Optimizado para SEO y rendimiento.",
+      "description": "Es una aplicación web para vender cursos en línea. Muestra información de cada curso en cards. Realizado desde cero con React, Vite y Tailwind CSS. ",
       "link": "https://landing-masterclasss.vercel.app",
       "github": "https://github.com/lexand-dev/Landing-Masterclasss",
       "image": "/projects/project-1.webp",
-      "tags": ["REACT", "TAILWIND"]
+      "tags": ["REACT", "TAILWIND"],
+      "type": "Frontend"
     },
     {
-      "title": "Taskify App - Trello clone",
+      "title": "Taskify Web App - Trello clone",
       "description": "Aplicación web para gestionar tareas y proyectos. Creada con NextJS y Tailwind CSS. Incluye autenticación y base de datos en tiempo real.",
       "link": "https://trello-power-clone.vercel.app/",
       "github": "https://github.com/lexand-dev/trello-power-clone",
       "image": "/projects/trello-power.webp",
-      "tags": ["NEXT", "TAILWIND", "PRISMA"]
+      "tags": ["NEXT", "TAILWIND", "PRISMA"],
+      "type": "Fullstack"
     },
     {
-      "title": "Podia Web - Landing Responsive",
+      "title": "Podia Clone - Landing Responsive",
       "description": "Landing page Creada con Astro y Tailwind CSS. Optimizada para SEO y rendimiento en dispositivos móviles.",
       "link": "https://podia-sell-web.vercel.app/",
       "github": "https://github.com/lexand-dev/podia-sell-web",
       "image": "/projects/podia.webp",
-      "tags": ["ASTROICON", "TAILWIND", "TAILWIND"]
+      "tags": ["ASTROICON", "TAILWIND", "TAILWIND"],
+      "type": "Frontend"
     }
   ],
-
+  "STACK_TITLE": "Modern Web Stack",
+  "STACK_DESCRIPTION": "Con experiencia en Patrones de Diseño en lenguajes funcionales y OOP, prefiero principalmente ES6 y ReactJS en mis proyectos frontend. A pesar de haber realizado proyectos con Styled Components y Material UI en el pasado, mi preferencia actual es TailwindCSS en mis proyectos.",
   "CERTIFICATION_TITLE": "Certificaciones",
   "CERTIFICACION_ITEMS": [
     {
@@ -72,9 +69,7 @@
       "DESCRIPTION": "Estudios en la facultad de Ingeniería de Sistemas, con especialización en desarrollo de software."
     }
   ],
-
   "CONTACT_TITLE": "Contacto",
   "CONTACT_MESSAGE": "¿Tienes un proyecto en mente o quieres contactarme? ¡Escríbeme!",
-
-  "FOOTER_COPYRIGHT": "© 2023 Lexand dev | Desarrollado por Alexander Flores"
+  "FOOTER_COPYRIGHT": " Lexand dev | Desarrollado por Alexander Flores"
 }

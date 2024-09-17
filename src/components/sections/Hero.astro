@@ -1,10 +1,11 @@
 ---
-import Badge from "./Badge.astro";
-import SocialPill from "./SocialPill.astro";
-import TagBadge from "./TagBadge.astro";
-import EmailIcon from "./icons/Email.astro";
-import GithubIcon from "./icons/Github.astro";
-import LinkedInIcon from "./icons/LinkedIn.astro";
+import EmailIcon from "@/components/icons/tech/Email.astro";
+import GithubIcon from "@/components/icons/tech/Github.astro";
+import LinkedInIcon from "@/components/icons/tech/LinkedIn.astro";
+
+import Badge from "@/components/Badge.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import TagBadge from "@/components/TagBadge.astro";
 
 interface Props {
   badge: string;
@@ -26,8 +27,7 @@ const { badge, about, country } = Astro.props;
 			md:flex-row
 			md:space-y-0
 			md:space-x-8
-			md:items-start
-			md:justify-start"
+			md:items-start"
 >
   <div
     class="max-w-[700px]
@@ -75,6 +75,7 @@ const { badge, about, country } = Astro.props;
         src="/img/profile.webp"
         alt="hero"
         class="rounded-lg
+            w-[300px]
 						md:max-w-[400px]
 						md:h-[380px]"
       />

@@ -17,6 +17,7 @@
     "@codaworks/react-glow": "^1.0.6",
     "@fontsource-variable/lexend-deca": "^5.0.8",
     "@fontsource/mansalva": "^5.0.18",
+    "@react-pdf/renderer": "^3.4.4",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vercel/analytics": "^1.2.2",

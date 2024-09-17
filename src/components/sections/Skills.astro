@@ -1,11 +1,19 @@
 ---
-import CSSIcon from "./tools/CSSIcon.astro";
-import HTMLIcon from "./tools/HTML.astro";
-import JavaScript from "./tools/JavaScript.astro";
-import MySQL from "./tools/MySQL.astro";
-import Notion from "./tools/Notion.astro";
-import OpenAI from "./tools/OpenAI.astro";
-import Sass from "./tools/Sass.astro";
+import CSSIcon from "@/components/icons/tools/CSSIcon.astro";
+import HTMLIcon from "@/components/icons/tools/HTML.astro";
+import JavaScript from "@/components/icons/tools/JavaScript.astro";
+import MySQL from "@/components/icons/tools/MySQL.astro";
+import Notion from "@/components/icons/tools/Notion.astro";
+import OpenAI from "@/components/icons/tools/OpenAI.astro";
+import Sass from "@/components/icons/tools/Sass.astro";
+
+import GlowSection from "@/components/react/GlowSection";
+
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
 const TAGS = [
   {
     name: "HTML5",
@@ -65,3 +73,8 @@ const TAGS = [
     ))
   }
 </ul>
+<GlowSection
+  title={i18n.STACK_TITLE}
+  description={i18n.STACK_DESCRIPTION}
+  client:visible
+/>

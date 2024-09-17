@@ -1,14 +1,13 @@
 ---
-import Github from "./icons/Github.astro";
-import LinkIcon from "./icons/Link.astro";
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
+import Github from "@/components/icons/tech/Github.astro";
+import LinkIcon from "@/components/icons/tech/Link.astro";
+import NextJS from "@/components/icons/tech/NextJS.astro";
+import Tailwind from "@/components/icons/tech/Tailwind.astro";
+import AstroIcon from "@/components/icons/tech/AstroIcon.astro";
+import Prisma from "@/components/icons/tech/Prisma.astro";
+import React from "@/components/icons/tech/React.astro";
 
-import AstroIcon from "./icons/AstroIcon.astro";
-import Prisma from "./icons/Prisma.astro";
-import React from "./icons/React.astro";
-
-import { getI18N } from "../i18n";
+import { getI18N } from "../../i18n";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -46,10 +45,10 @@ const PROJECTS = i18n.PROJECTS_ITEMS.map((project) => ({
 }));
 ---
 
-<div class="grid gap-5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+<div class="grid gap-5 grid-cols-1 lg:grid-cols-2 mx-auto w-full px-4">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <article class="rounded-xl border border-slate-200 dark:border-neutral-800 py-4 px-6 max-w-[280px]">
+      <article class="rounded-xl border border-slate-200 dark:border-neutral-800 py-4 px-6 max-w-[340px]">
         <h3 class="text-xl font-semibold text-green-500 mb-2">{title}</h3>
         <p class="text-sm mb-4 text-pretty">{description}</p>
 
@@ -59,8 +58,8 @@ const PROJECTS = i18n.PROJECTS_ITEMS.map((project) => ({
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
-        <div class="flex flex-col gap-y-2">
-          <ul class="flex gap-2 flex-wrap mb-2">
+        <div class="mt-2">
+          <ul class="flex gap-2 my-4 ">
             {tags.map((tag) => (
               <li>
                 <span

@@ -1,8 +1,8 @@
 ---
-import Github from "./icons/Github.astro";
-import LinkIcon from "./icons/Link.astro";
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
+import Github from "@/components/icons/tech/Github.astro";
+import LinkIcon from "@/components/icons/tech/Link.astro";
+import NextJS from "@/components/icons/tech/NextJS.astro";
+import Tailwind from "@/components/icons/tech/Tailwind.astro";
 
 const TAGS = {
   NEXT: {
@@ -15,7 +15,7 @@ const TAGS = {
     class: "text-black",
     icon: Tailwind,
   },
-}
+};
 const PROJECTS = [
   {
     title: "Calculadora - App",
@@ -53,15 +53,17 @@ const PROJECTS = [
     image: "/projects/project-4.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
-]
+];
 ---
 
 {
   PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="rounded-2xl border border-black p-10 ml-5 bg-green-50 w-[350px]">
-      <h3 class="text-pretty text-2xl font-semibold text-green-500 mb-2">{title}</h3>
+      <h3 class="text-pretty text-2xl font-semibold text-green-500 mb-2">
+        {title}
+      </h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      
+
       <img
         loading="lazy"
         class="rounded shadow-2xl shadow-white/10 aspect-auto pb-5"
@@ -70,49 +72,45 @@ const PROJECTS = [
       />
       <div class="flex flex-col gap-y-2">
         <ul class="flex gap-x-2 flex-row mb-2">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex justify-center items-center gap-x-2 rounded-full border border-black bg-slate-100 text-xs ${tag.class} py-1 px-3`}
-            >
-              <tag.icon class="size-5" />
-              {tag.name}
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex justify-center items-center gap-x-2 rounded-full border border-black bg-slate-100 text-xs ${tag.class} py-1 px-3`}
+              >
+                <tag.icon class="size-5" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
+            hover:scale-105 transform"
+          >
+            <span class="block">
+              <LinkIcon class="size-5 inline-block" />
             </span>
-          </li>
-        ))}
-      </ul>
-      <div class="flex">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
+            <p class="block">Ver proyecto</p>
+          </a>
+          <span class="mx-2">|</span>
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
             hover:scale-105 transform"
-        >
-        <span class="block">
-          <LinkIcon class="size-5 inline-block" />
-        </span>
-          <p class="block">
-            Ver proyecto
-          </p>
-        </a>
-        <span class="mx-2">|</span>
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-green-500 hover:text-green-700 flex items-center gap-1 justify-center transition
-            hover:scale-105 transform"
-        >
-        <span>
-          <Github class="size-6 inline-block" />
-        </span>
-          Ver código
-        </a>
+          >
+            <span>
+              <Github class="size-6 inline-block" />
+            </span>
+            Ver código
+          </a>
+        </div>
       </div>
-
-      </div>
-
     </article>
   ))
 }
