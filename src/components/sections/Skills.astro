@@ -38,13 +38,16 @@ const TAGS = [
 ];
 ---
 
-<ul class="w-full
+<ul
+  class="w-full
   mb-2
   flex
-  flex-wrap
+  items-center
+  justify-center
   gap-x-4
   gap-y-2
-  md:flex-row">
+  md:flex-row"
+>
   {
     TAGS.map(({ name, class: classValue, Icon }) => (
       <li class="">

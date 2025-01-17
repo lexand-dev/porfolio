@@ -16,8 +16,7 @@ import AsideCard from "@/components/AsideCard.astro";
 
 import SectionContainer from "@/components/SectionContainer.astro";
 import SectionTitle from "@/components/SectionTitle.astro";
-
-import ViewMore from "@/components/ViewMore.astro";
+import Bento from "@/components/Bento.astro";
 
 import { getI18N } from "@/i18n";
 
@@ -27,7 +26,7 @@ const i18n = getI18N({ currentLocale });
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <main class="w-full h-full max-w-7xl mx-auto">
-    <section id="about-me" class="py-10 lg:py-36 w-full px-4">
+    <section id="about-me" class="py-16 lg:py-36 w-full px-8">
       <Hero
         badge={i18n.HERO_BADGE}
         about={i18n.HERO_ABOUT}
@@ -35,83 +34,70 @@ const i18n = getI18N({ currentLocale });
       />
     </section>
 
-    <div
-      class="md:flex md:justify-center pb-16 space-y-8 md:pb-20 mx-auto w-full"
+    <SectionContainer
+      class="md:flex md:justify-center pb-16 space-y-8 md:pb-20 w-full"
     >
-      <div>
-        <SectionContainer id="experience">
-          <SectionTitle
-            class="text-xl md:text-3xl font-semibold py-4 mb-6 flex gap-x-3 items-center"
-          >
-            <BriefCase class="size-7" />
-            {i18n.EXPERIENCE_TITLE}
-          </SectionTitle>
-          <StarProject />
-          <!-- <Experience data={i18n.EXPERIENCE_ITEMS} /> -->
-        </SectionContainer>
-
-        <SectionContainer id="projects">
-          <SectionTitle class="text-2xl md:text-3xl font-semibold py-4 mb-6">
-            <span>
-              <CodeIcon class="inline-block size-8" />
-            </span>
-            {i18n.PROJECTS_TITLE}
-            <span class="inline-block text-blue-500"> </span>
-          </SectionTitle>
-
-          <Projects />
-          <div
-            class="mx-auto
-            w-[fit-content]
-            flex
-            flex-col
-            md:flex-wrap
-            md:flex-row
-            gap-4"
-          >
-          </div>
-        </SectionContainer>
-
-        <SectionContainer id="skills" class="pt-16">
-          <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
-            <span>
-              <ToolsIcon class="inline-block size-8" />
-            </span>
-            Skills
-          </SectionTitle>
-          <Skills />
-        </SectionContainer>
-
-        <SectionContainer id="skills" class="pt-16">
-          <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
-            <span>
-              <ToolsIcon class="inline-block size-8" />
-            </span>
-            Certifications
-          </SectionTitle>
-          <Certifications />
-        </SectionContainer>
-
-        <SectionContainer id="contacto" class="pt-16">
-          <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
-            <span>
-              <ToolsIcon class="inline-block size-8" />
-            </span>
-            {i18n.CONTACT_TITLE}
-          </SectionTitle>
-          <div class="flex flex-col gap-4">
-            <p class="text-lg">
-              {i18n.CONTACT_MESSAGE}
-            </p>
-            <a href="mailto:alexfloresrayme@gmail.com" class="text-blue-500">
-              Hello -->
-            </a>
-          </div>
-        </SectionContainer>
-      </div>
+      <SectionContainer id="experiencia">
+        <SectionTitle
+          class="text-xl md:text-3xl font-semibold py-4 mb-6 flex gap-x-3 items-center"
+        >
+          <BriefCase class="size-7" />
+          {i18n.EXPERIENCE_TITLE}
+        </SectionTitle>
+        <StarProject />
+        <!-- <Experience data={i18n.EXPERIENCE_ITEMS} /> -->
+      </SectionContainer>
       <AsideSection id="aside-section" class="flex flex-col space-y-8">
         <AsideCard />
       </AsideSection>
-    </div>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <SectionTitle class="text-2xl md:text-3xl font-semibold py-4 mb-6">
+        <span>
+          <CodeIcon class="inline-block size-8" />
+        </span>
+        {i18n.PROJECTS_TITLE}
+        <span class="inline-block text-blue-500"> </span>
+      </SectionTitle>
+      <Bento />
+    </SectionContainer>
+
+    <SectionContainer id="skills" class="pt-16">
+      <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
+        <span>
+          <ToolsIcon class="inline-block size-8" />
+        </span>
+        Skills
+      </SectionTitle>
+      <Skills />
+    </SectionContainer>
+
+    <SectionContainer id="skills" class="pt">
+      <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
+        <span>
+          <ToolsIcon class="inline-block size-8" />
+        </span>
+        Certifications
+      </SectionTitle>
+      <Certifications />
+    </SectionContainer>
+
+    <SectionContainer id="contacto" class="pt-16">
+      <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
+        <span>
+          <ToolsIcon class="inline-block size-8" />
+        </span>
+        {i18n.CONTACT_TITLE}
+      </SectionTitle>
+      <div class="flex flex-col gap-4">
+        <p class="text-lg">
+          {i18n.CONTACT_MESSAGE}
+        </p>
+        <a href="mailto:alexfloresrayme@gmail.com" class="text-blue-500">
+          Hello -->
+        </a>
+      </div>
+    </SectionContainer>
   </main>
 </Layout>

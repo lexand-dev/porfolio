@@ -7,11 +7,11 @@ interface GlowSectionProps {
 
 const GlowSection: React.FC<GlowSectionProps> = ({ title, description }) => {
   return (
-    <GlowCapture className="flex justify-start py-16 w-full">
+    <GlowCapture className="flex justify-center py-16 w-full">
       <Glow color="purple">
         <article
           className="
-          md:max-w-[480px]
+          md:max-w-[900px]
           flex 
           justify-center 
           flex-col 
@@ -28,9 +28,14 @@ const GlowSection: React.FC<GlowSectionProps> = ({ title, description }) => {
           
           transition-colors"
         >
-          <h3 className="text-xl py-2">{title}</h3>
-          <div className="text-base">
+          <h3 className="text-xl p-4 md:py-2">{title}</h3>
+          <div className="text-base p-6 space-y-4 md:flex items-center md:space-x-8">
             <p className="pb-1">{description}</p>
+            <img
+              src="/projects/project-2.webp"
+              alt=""
+              className="w-96 rounded-lg"
+            />
           </div>
         </article>
       </Glow>
