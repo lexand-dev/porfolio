@@ -15,9 +15,9 @@ const { data } = Astro.props;
 
 <ol class="relative border-s border-gray-200 ml-3">
   {
-    data?.map((experiencie) => (
+    data?.map((experience) => (
       <li class="mb-10 ms-4 mx-auto">
-        <ExperienceItem {...experiencie} />
+        <ExperienceItem {...experience} />
       </li>
     ))
   }
