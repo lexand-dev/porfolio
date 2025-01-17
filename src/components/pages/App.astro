@@ -6,7 +6,7 @@ import BriefCase from "@/components/icons/tech/BriefCase.astro";
 import Layout from "@/layouts/Layout.astro";
 
 import Hero from "@/components/sections/Hero.astro";
-import Experience from "@/components/sections/Experience.astro";
+import StarProject from "@/components/StarProject.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Certifications from "@/components/sections/Certifications.astro";
@@ -46,13 +46,14 @@ const i18n = getI18N({ currentLocale });
             <BriefCase class="size-7" />
             {i18n.EXPERIENCE_TITLE}
           </SectionTitle>
-          <Experience data={i18n.EXPERIENCE_ITEMS} />
+          <StarProject />
+          <!-- <Experience data={i18n.EXPERIENCE_ITEMS} /> -->
         </SectionContainer>
 
         <SectionContainer id="projects">
           <SectionTitle class="text-2xl md:text-3xl font-semibold py-4 mb-6">
             <span>
-              <CodeIcon class="inline-block size-8 mr-2" />
+              <CodeIcon class="inline-block size-8" />
             </span>
             {i18n.PROJECTS_TITLE}
             <span class="inline-block text-blue-500"> </span>
@@ -74,7 +75,7 @@ const i18n = getI18N({ currentLocale });
         <SectionContainer id="skills" class="pt-16">
           <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
             <span>
-              <ToolsIcon class="inline-block size-8 mr-2" />
+              <ToolsIcon class="inline-block size-8" />
             </span>
             Skills
           </SectionTitle>
@@ -84,7 +85,7 @@ const i18n = getI18N({ currentLocale });
         <SectionContainer id="skills" class="pt-16">
           <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
             <span>
-              <ToolsIcon class="inline-block size-8 mr-2" />
+              <ToolsIcon class="inline-block size-8" />
             </span>
             Certifications
           </SectionTitle>
@@ -94,7 +95,7 @@ const i18n = getI18N({ currentLocale });
         <SectionContainer id="contacto" class="pt-16">
           <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
             <span>
-              <ToolsIcon class="inline-block size-8 mr-2" />
+              <ToolsIcon class="inline-block size-8" />
             </span>
             {i18n.CONTACT_TITLE}
           </SectionTitle>
