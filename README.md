@@ -52,3 +52,21 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+  <SectionContainer
+      id="experience"
+      class="md:flex md:justify-center md:flex-col pb-16 space-y-8 md:pb-20 w-full"
+    >
+      <SectionTitle
+        class="text-xl md:text-3xl font-semibold py-4 mb-6 flex gap-x-3 items-center"
+      >
+        <BriefCase class="size-7" />
+        {i18n.EXPERIENCE_TITLE}
+      </SectionTitle>
+      <div class="flex items-center justify-between">
+        <StarProject />
+        <AsideCard />
+      </div>
+      <!-- <Experience data={i18n.EXPERIENCE_ITEMS} /> -->
+  </SectionContainer> 

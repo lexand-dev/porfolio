@@ -1,0 +1,15 @@
+---
+const { class: className, padding, cover, name, description } = Astro.props;
+---
+
+<div
+  class={`${className} md:h-56 lg:h-96 w-full overflow-hidden rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 relative bg-cover bg-no-repeat bg-center`}
+>
+  <div class={`pt-8 ${padding} text-white`}>
+    <h2 class="text-xl font-bold">{name}</h2>
+    <p class="text-sm text-gray-400">{description}</p>
+  </div>
+  <div class="p-4 flex justify-center items-center">
+    <img src={cover} class={`bg-center rounded-lg h-[230px]`} />
+  </div>
+</div>

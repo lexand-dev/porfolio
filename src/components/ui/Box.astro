@@ -1,0 +1,57 @@
+---
+import { PlusIcon } from "lucide-react";
+import { Button } from "./button";
+import { OpenButton } from "@/components/react/open-button";
+
+const { class: className, padding, cover, name, description, id } = Astro.props;
+
+const project = [
+  {
+    id: "vid-skool",
+    name: "Vid Skool",
+    description: "An educational platform for video learning",
+    cover: "/vid-skool.png"
+  },
+  {
+    id: "taskiflow-ai",
+    name: "Taskiflow AI",
+    description: "An AI-powered task management tool",
+    cover: "/taskiflow.png"
+  },
+  {
+    id: "parallel",
+    name: "Parallel",
+    description: "A collaborative workspace for teams",
+    cover: "/parallel.png"
+  },
+  {
+    id: "only-food",
+    name: "Only Food",
+    description: "A food delivery service",
+    cover: "/only-food.webp"
+  },
+  {
+    id: "finance-dashboard",
+    name: "Finance Dashboard",
+    description: "A financial management dashboard",
+    cover: "/finance.png"
+  }
+];
+
+const pro = project.find((p) => p.id === id) || project[0];
+---
+
+<div
+  class={`${className} md:h-56 lg:h-96 w-full overflow-hidden rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 relative bg-cover bg-no-repeat bg-center`}
+>
+  <div class="absolute top-0 right-0 p-4 z-10">
+    <OpenButton client:only project={pro} />
+  </div>
+  <div class={`pt-8 ${padding} text-white`}>
+    <h2 class="text-xl font-bold">{name}</h2>
+    <p class="text-sm text-gray-400">{description}</p>
+  </div>
+  <div class="p-4 flex justify-center items-center">
+    <img src={cover} class={`bg-center rounded-lg h-[230px]`} />
+  </div>
+</div>

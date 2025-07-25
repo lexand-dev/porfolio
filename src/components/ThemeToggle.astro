@@ -59,7 +59,7 @@ const THEMES = ["Light", "Dark", "System"];
 
 <script is:inline>
   let remove = null;
-  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+  const matchMedia = window.matchMedia("(prefers-color-scheme:dark)");
   const themesMenu = document.getElementById("themes-menu");
 
   const getThemePreference = () => {

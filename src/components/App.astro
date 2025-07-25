@@ -16,64 +16,49 @@ import AsideCard from "@/components/AsideCard.astro";
 
 import SectionContainer from "@/components/SectionContainer.astro";
 import SectionTitle from "@/components/SectionTitle.astro";
-import Bento from "@/components/Bento.astro";
+import Bento from "@/components/sections/Bento.astro";
 
 import { getI18N } from "@/i18n";
+import GlowSection from "./react/GlowSection";
+import ShowDetailsModal from "./react/show-details-modal";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
-  <main class="w-full h-full max-w-7xl mx-auto">
-    <section id="about-me" class="py-16 lg:py-36 w-full px-8">
+  <main class="w-full h-full max-w-6xl mx-auto">
+    <SectionContainer id="about-me" class="pt-16 lg:pt-36 pb-2">
       <Hero
         badge={i18n.HERO_BADGE}
         about={i18n.HERO_ABOUT}
         country={i18n.HERO_COUNTRY}
       />
-    </section>
-
-    <SectionContainer
-      class="md:flex md:justify-center pb-16 space-y-8 md:pb-20 w-full"
-    >
-      <SectionContainer id="experiencia">
-        <SectionTitle
-          class="text-xl md:text-3xl font-semibold py-4 mb-6 flex gap-x-3 items-center"
-        >
-          <BriefCase class="size-7" />
-          {i18n.EXPERIENCE_TITLE}
-        </SectionTitle>
-        <StarProject />
-        <!-- <Experience data={i18n.EXPERIENCE_ITEMS} /> -->
-      </SectionContainer>
-      <AsideSection id="aside-section" class="flex flex-col space-y-8">
-        <AsideCard />
-      </AsideSection>
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <SectionTitle class="text-2xl md:text-3xl font-semibold py-4 mb-6">
+    <SectionContainer id="skills" class="pt-16">
+      <div class="flex flex-col items-center md:flex-row gap-8">
+        <GlowSection
+          title={i18n.STACK_TITLE}
+          description={i18n.STACK_DESCRIPTION}
+          client:visible
+        />
+        <AsideCard />
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <SectionTitle class="text-2xl md:text-3xl font-semibold">
         <span>
           <CodeIcon class="inline-block size-8" />
         </span>
         {i18n.PROJECTS_TITLE}
-        <span class="inline-block text-blue-500"> </span>
       </SectionTitle>
       <Bento />
+      <ShowDetailsModal client:only />
     </SectionContainer>
 
-    <SectionContainer id="skills" class="pt-16">
-      <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
-        <span>
-          <ToolsIcon class="inline-block size-8" />
-        </span>
-        Skills
-      </SectionTitle>
-      <Skills />
-    </SectionContainer>
-
-    <SectionContainer id="skills" class="pt">
+    <SectionContainer id="certifications" class="pt">
       <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
         <span>
           <ToolsIcon class="inline-block size-8" />
@@ -83,7 +68,21 @@ const i18n = getI18N({ currentLocale });
       <Certifications />
     </SectionContainer>
 
-    <SectionContainer id="contacto" class="pt-16">
+    <SectionContainer id="about" class="lg:max-w-4xl py-16">
+      <div class="flex flex-col gap-4 text-center">
+        <SectionTitle class="text-2xl md:text-3xl font-semibold">
+          {i18n.ABOUT_TITLE}
+        </SectionTitle>
+        <p class="text-lg">
+          {i18n.ABOUT_DESCRIPTION}
+        </p>
+        <p class="text-lg">
+          {i18n.ABOUT_DESCRIPTION_2}
+        </p>
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="contact" class="pt-16">
       <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
         <span>
           <ToolsIcon class="inline-block size-8" />

@@ -20,13 +20,9 @@ const { badge, about, country } = Astro.props;
       flex
 			flex-col
 			items-center
-			justify-center
+			justify-between
 			text-center
-			space-y-4
-			md:flex-row
-			md:space-y-0
-      md:space-x-8
-			md:items-start"
+			md:flex-row"
 >
   <div
     class="max-w-[700px]
@@ -43,41 +39,44 @@ const { badge, about, country } = Astro.props;
       Alexander
       <span class="text-green-500"> Flores rayme </span>
     </h1>
-    <Badge>
-      {badge}
-    </Badge>
-    <p class="p-0 mt-3 font-semibold">{country}</p>
-    <p
-      set:html={about}
-      class="text-gray-600 dark:text-gray-300 my-4 max-w-[590px] text-left text-pretty"
-    />
-    <nav class="flex flex-wrap gap-4 mt-12">
-      <SocialPill
-        href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/"
-      >
-        <LinkedInIcon class="size-4" />
-        LinkedIn
-      </SocialPill>
-      <SocialPill href="https://github.com/lexand-dev">
-        <GithubIcon class="size-4" />
-        Github
-      </SocialPill>
-      <SocialPill href="mailto:alexfloresrayme@gmail.com">
-        <EmailIcon class="size-4" />
-        Email
-      </SocialPill>
-    </nav>
+    <div class="flex items-center py-4 gap-x-4">
+      <Badge>
+        {badge}
+      </Badge>
+      <p class="p-0 font-semibold">{country}</p>
+    </div>
+    <div class="flex flex-col items-center md:items-start gap-y-8">
+      <p
+        set:html={about}
+        class="text-gray-600 dark:text-gray-300 max-w-[590px] text-left text-pretty text-lg"
+      />
+      <ul class="flex flex-wrap gap-4">
+        <SocialPill
+          href="https://www.linkedin.com/in/alexander-flores-rayme-727545165/"
+        >
+          <LinkedInIcon class="size-4" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/lexand-dev">
+          <GithubIcon class="size-4" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:alexfloresrayme@gmail.com">
+          <EmailIcon class="size-4" />
+          Email
+        </SocialPill>
+      </ul>
+    </div>
   </div>
   <div class="py-4 flex flex-col items-center">
     <div>
-      <img
-        src="/img/profile.webp"
-        alt="hero"
+      <div
         class="rounded-lg
             w-[300px]
 						md:max-w-[400px]
-						md:h-[380px]"
-      />
+						md:h-[380px] bg-gray-500"
+      >
+      </div>
     </div>
   </div>
 </header>
