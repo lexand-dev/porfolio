@@ -13,6 +13,8 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^4.3.0",
     "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/vercel": "^8.2.5",
+    "@vercel/analytics": "^1.5.0",
     "@codaworks/react-glow": "^1.0.6",
     "@fontsource-variable/lexend-deca": "^5.0.8",
     "@fontsource/mansalva": "^5.0.18",
