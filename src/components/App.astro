@@ -1,16 +1,11 @@
 ---
 import CodeIcon from "@/components/icons/tech/Code.astro";
 import ToolsIcon from "@/components/icons/tech/Tools.astro";
-import BriefCase from "@/components/icons/tech/BriefCase.astro";
 
 import Layout from "@/layouts/Layout.astro";
 
 import Hero from "@/components/sections/Hero.astro";
-import StarProject from "@/components/StarProject.astro";
-import Projects from "@/components/sections/Projects.astro";
-import Skills from "@/components/sections/Skills.astro";
 import Certifications from "@/components/sections/Certifications.astro";
-import AsideSection from "@/components/sections/AsideSection.astro";
 
 import AsideCard from "@/components/AsideCard.astro";
 
@@ -47,7 +42,7 @@ const i18n = getI18N({ currentLocale });
       </div>
     </SectionContainer>
 
-    <SectionContainer id="projects">
+    <SectionContainer id="projects" class="pt-16">
       <SectionTitle class="text-2xl md:text-3xl font-semibold">
         <span>
           <CodeIcon class="inline-block size-8" />
@@ -58,31 +53,46 @@ const i18n = getI18N({ currentLocale });
       <ShowDetailsModal client:only />
     </SectionContainer>
 
-    <SectionContainer id="certifications" class="pt">
+    <SectionContainer id="certifications" class="pt-16">
       <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
         <span>
           <ToolsIcon class="inline-block size-8" />
         </span>
-        Certifications
+        {i18n.CERTIFICATION_TITLE}
       </SectionTitle>
       <Certifications />
     </SectionContainer>
 
     <SectionContainer id="about" class="lg:max-w-4xl py-16">
       <div class="flex flex-col gap-4 text-center">
-        <SectionTitle class="text-2xl md:text-3xl font-semibold">
+        <!-- <SectionTitle class="text-2xl md:text-3xl font-semibold mb-0 md:mb-6">
           {i18n.ABOUT_TITLE}
-        </SectionTitle>
-        <p class="text-lg">
-          {i18n.ABOUT_DESCRIPTION}
-        </p>
-        <p class="text-lg">
-          {i18n.ABOUT_DESCRIPTION_2}
-        </p>
+        </SectionTitle> -->
+        <div
+          class="rounded-3xl
+          border
+          border-slate-200
+          dark:border-neutral-800
+          p-4
+          md:p-6
+          lg:p-8
+          text-center
+          dark:bg-gradient-to-t
+          dark:from-neutral-800
+          dark:to-neutral-800
+          30"
+        >
+          <GlowSection
+            title={i18n.ABOUT_TITLE}
+            description={i18n.ABOUT_DESCRIPTION}
+            descriptionTwo={i18n.ABOUT_DESCRIPTION_2}
+            client:visible
+          />
+        </div>
       </div>
     </SectionContainer>
 
-    <SectionContainer id="contact" class="pt-16">
+    <SectionContainer id="contact" class="p-16">
       <SectionTitle class="text-2xl md:text-3xl font-bold py-4">
         <span>
           <ToolsIcon class="inline-block size-8" />
@@ -90,7 +100,7 @@ const i18n = getI18N({ currentLocale });
         {i18n.CONTACT_TITLE}
       </SectionTitle>
       <div class="flex flex-col gap-4">
-        <p class="text-lg">
+        <p class="text-lg text-black/60 dark:text-gray-300">
           {i18n.CONTACT_MESSAGE}
         </p>
         <a href="mailto:alexfloresrayme@gmail.com" class="text-blue-500">

@@ -34,7 +34,7 @@ const { badge, about, country } = Astro.props;
 				md:text-left"
   >
     <h1
-      class="text-6xl dark:text-gray-300 font-mansalva font-bold flex flex-col pb-6"
+      class="text-6xl text-black/60 dark:text-gray-300 font-mansalva font-bold flex flex-col pb-6"
     >
       Alexander
       <span class="text-green-500"> Flores rayme </span>
@@ -70,13 +70,16 @@ const { badge, about, country } = Astro.props;
   </div>
   <div class="py-4 flex flex-col items-center">
     <div>
-      <div
+      <img
+        src="/avatar.png"
+        alt="Alexander Flores Rayme"
+        loading="lazy"
+        decoding="async"
         class="rounded-lg
             w-[300px]
 						md:max-w-[400px]
-						md:h-[380px] bg-gray-500"
-      >
-      </div>
+						md:h-[380px]"
+      />
     </div>
   </div>
 </header>

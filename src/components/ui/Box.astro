@@ -1,6 +1,4 @@
 ---
-import { PlusIcon } from "lucide-react";
-import { Button } from "./button";
 import { OpenButton } from "@/components/react/open-button";
 
 const { class: className, padding, cover, name, description, id } = Astro.props;
@@ -9,32 +7,51 @@ const project = [
   {
     id: "vid-skool",
     name: "Vid Skool",
-    description: "An educational platform for video learning",
-    cover: "/vid-skool.png"
+    description:
+      "Gestión de videos: Subida, procesamiento y reproducción de contenido educativo Sistema de playlists: Creación y gestión de colecciones de videos Transcripciones automáticas: Generación de subtítulos para videos Área de estudio: Interfaz dedicada para educadores y creadores de contenido Autenticación de usuarios: Integración con Clerk para gestión de cuentas.",
+    cover: "/vid-skool.png",
+    stack: ["next", "neon", "Tailwind", "trpc"],
+    github: "",
+    website: "https://vid-skool.vercel.app/"
   },
   {
     id: "taskiflow-ai",
-    name: "Taskiflow AI",
-    description: "An AI-powered task management tool",
-    cover: "/taskiflow.png"
+    name: "Taskiflow",
+    description:
+      "Aplicación para gestionar proyectos y tareas, mejorada con funciones de IA que optimizan la productividad (p. ej., subtareas sugeridas por IA y descripciones generadas automáticamente).",
+    cover: "/taskiflow.png",
+    stack: ["Next", "Clerk", "Tailwind", "trpc", "OpenAI", "zod"],
+    github: "",
+    website: "https://vid-skool.vercel.app/"
   },
   {
     id: "parallel",
     name: "Parallel",
-    description: "A collaborative workspace for teams",
-    cover: "/parallel.png"
+    description:
+      "App para equipos que permite la gestión de proyectos y tareas. con invitación de miembros a un workspace y diferentes roles. Con diferentes visualizaciones de tareas y proyectos.",
+    cover: "/parallel.png",
+    stack: ["Next", "drizzle", "Tailwind", "graphql", "postgre", "zod"],
+    github: "",
+    website: "https://vid-skool.vercel.app/"
   },
   {
     id: "only-food",
-    name: "Only Food",
-    description: "A food delivery service",
-    cover: "/only-food.webp"
+    name: "Track",
+    description: "A b2b sass ai assistant for food delivery services.",
+    cover: "/only-food.webp",
+    stack: ["Next", "openai", "Tailwind", "trpc", "clerk", "zod"],
+    github: "",
+    website: "https://vid-skool.vercel.app/"
   },
   {
     id: "finance-dashboard",
-    name: "Finance Dashboard",
-    description: "A financial management dashboard",
-    cover: "/finance.png"
+    name: "Finance",
+    description:
+      "Finance Dashboard with NexJS14 to manage and add transactions, Changeable chart types & CSV transaction imports.",
+    cover: "/finance.png",
+    stack: ["drizzle", "clerk", "hono", "tailwind", "next", "zod"],
+    github: "",
+    website: "https://vid-skool.vercel.app/"
   }
 ];
 
@@ -47,7 +64,7 @@ const pro = project.find((p) => p.id === id) || project[0];
   <div class="absolute top-0 right-0 p-4 z-10">
     <OpenButton client:only project={pro} />
   </div>
-  <div class={`pt-8 ${padding} text-white`}>
+  <div class={`pt-8 ${padding} text-black/60 dark:text-white`}>
     <h2 class="text-xl font-bold">{name}</h2>
     <p class="text-sm text-gray-400">{description}</p>
   </div>

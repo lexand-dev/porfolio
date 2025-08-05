@@ -9,6 +9,9 @@ interface OpenButtonProps {
     name: string;
     description: string;
     cover: string;
+    stack: string[];
+    github?: string;
+    website?: string;
   };
 }
 
@@ -22,7 +25,10 @@ export const OpenButton = ({ project }: OpenButtonProps) => {
         id: project.id,
         name: project.name,
         description: project.description,
-        cover: project.cover
+        cover: project.cover,
+        stack: project.stack,
+        github: project.github,
+        website: project.website
       }
     });
     isModalOpen.set(!$isModalOpen);

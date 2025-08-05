@@ -12,12 +12,14 @@ const ShowDetailsModal = () => {
     return null; // No modal to show
   }
 
+  console.log("ShowDetailsModal", $curentProject);
+
   return (
     <ResponsiveModal
       open={$isModalOpen}
       onOpenChange={() => isModalOpen.set(!$isModalOpen)}
     >
-      <Project />
+      <Project project={$curentProject.project} />
     </ResponsiveModal>
   );
 };

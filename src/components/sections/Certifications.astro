@@ -1,12 +1,56 @@
 ---
+import BoxerGallery from "../BoxerGallery.astro";
 
+const CERTIFICATIONS = [
+  {
+    id: "https://www.datacamp.com/certificate/AIEDA0019439658077",
+    name: "AI Engineer DataCamp",
+    path: "certiai"
+  },
+  {
+    id: "/certificados/azure-full.png",
+    name: "Azure Fundamentals",
+    path: "azure-full"
+  },
+  {
+    id: "/certificados/fullstack.png",
+    name: "Full Stack Developer",
+    path: "fullstack"
+  },
+  {
+    id: "/certificados/containers.png",
+    name: "Containers Fundamentals",
+    path: "containers"
+  },
+  {
+    id: "/certificados/git.png",
+    name: "Git Fundamentals",
+    path: "git"
+  },
+  {
+    id: "/certificados/linux.png",
+    name: "Linux Fundamentals",
+    path: "linux"
+  }
+];
 ---
 
 <div>
-  <div
-    class="mx-auto w-[fit-content] flex flex-col md:flex-wrap md:flex-row gap-4"
-  >
-    section certifications
+  <div class="mx-auto flex flex-col md:flex-wrap md:flex-row gap-4">
+    <div
+      class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 w-full h-full mx-auto"
+    >
+      {
+        CERTIFICATIONS.map((certification) => (
+          <div class="w-full md:w-1/3 lg:w-1/4 p-1">
+            <BoxerGallery id={certification.id} name={certification.path} />
+            <h3 class="text-lg font-semibold mb-2 text-center pt-2 text-black/60 dark:text-white">
+              {certification.name}
+            </h3>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </div>
 

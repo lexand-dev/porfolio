@@ -571,25 +571,26 @@ export const Icons = {
   ),
   tailwind: ({ ...props }: IconProps) => (
     <svg
-      {...props}
-      viewBox="0 0 256 221"
-      width="256"
-      height="221"
       xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="xMidYMid"
+      fill="none"
+      viewBox="0 0 54 33"
+      width="1em"
+      height="1em"
+      {...props}
     >
-      <path
-        d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36Z"
-        fill="#41B883"
-      />
-      <path
-        d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0H0Z"
-        fill="#41B883"
-      />
-      <path
-        d="M50.56 0 128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56Z"
-        fill="#35495E"
-      />
+      <g clipPath="url(#tailwindcss__a)">
+        <path
+          fill="#38bdf8"
+          fillRule="evenodd"
+          d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+          clipRule="evenodd"
+        />
+      </g>
+      <defs>
+        <clipPath id="tailwindcss__a">
+          <path fill="#fff" d="M0 0h54v32.4H0z" />
+        </clipPath>
+      </defs>
     </svg>
   ),
   trpc: ({ ...props }: IconProps) => (
@@ -776,6 +777,31 @@ export const Icons = {
         fill="#FFF"
         mask="url(#b)"
       />
+    </svg>
+  ),
+  link: ({ ...props }: IconProps) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
+      <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
+      <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
+      <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
+      <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
+      <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
+      <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
+      <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
+      <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
     </svg>
   )
 };

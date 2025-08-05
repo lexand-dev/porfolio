@@ -11,38 +11,43 @@ const i18n = getI18N({ currentLocale });
   class={`
 		w-screen
 		fixed
-		flex
-		justify-center
+		
+		z-10
+	`}
+  {...Astro.props}
+>
+  <div
+    class="flex
+    max-w-[1200px]
+    mx-auto
+		justify-between
 		items-center
 		lg:gap-x-48
 		px-5
 		py-4
 		md:px-4
-		lg:px-14
-		z-10
-	`}
-  {...Astro.props}
->
-  <h1
-    class="header-nav md:text-xl
+		lg:px-14"
+  >
+    <h1
+      class="header-nav md:text-xl
 			lg:text-xl
 			font-bold
       px-2
       py-1
 			text-gray-800"
-  >
-    <a href="#about-me">
-      <img
-        width="48"
-        height="48"
-        src="https://img.icons8.com/doodle/48/tetra-pak--v1.png"
-        alt="tetra-pak--v1"
-      />
-    </a>
-  </h1>
+    >
+      <a href="#about-me">
+        <img
+          width="48"
+          height="48"
+          src="https://img.icons8.com/doodle/48/tetra-pak--v1.png"
+          alt="tetra-pak--v1"
+        />
+      </a>
+    </h1>
 
-  <nav
-    class={`
+    <nav
+      class={`
     header-nav
 			hidden
       px-2 py-1
@@ -52,47 +57,51 @@ const i18n = getI18N({ currentLocale });
 			rounded-2xl
 			bg-black/10
     `}
-  >
-    <a
-      class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
-      href="#experience"
     >
-      {i18n.NAV_EXPERIENCE}
-    </a>
-    <a
-      class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
-      href="#projects"
-    >
-      {i18n.NAV_PROJECTS}
-    </a>
-    <!--   <a
+      <a
+        class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition text-black/60 dark:text-gray-300"
+        href="#experience"
+      >
+        {i18n.NAV_EXPERIENCE}
+      </a>
+      <a
+        class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition text-black/60 dark:text-gray-300"
+        href="#projects"
+      >
+        {i18n.NAV_PROJECTS}
+      </a>
+      <!--   <a
       class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
       href="#sobre-mi"
     >
       {i18n.NAV_ABOUT}
     </a> -->
-    <a
-      class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition"
-      href="#contact"
-    >
-      {i18n.NAV_CONTACT}
-    </a>
-  </nav>
-
-  <ul
-    class="hidden header-nav md:flex md:gap-6 md:items-center md:font-semibold p-2"
-  >
-    <li class="text-xl transition
-			hover:scale-110">
-      <a href={i18n.NAV_EN_LINK}>
-        {i18n.NAV_EN}
+      <a
+        class="hover:bg-green-500/80 hover:text-white rounded-full px-3 transition text-black/60 dark:text-gray-300"
+        href="#contact"
+      >
+        {i18n.NAV_CONTACT}
       </a>
-    </li>
-    <li class="text-xl transition
-			hover:scale-110">
-      <ThemeToggle />
-    </li>
-    <!-- 			<li>
+    </nav>
+
+    <ul
+      class="hidden header-nav md:flex md:gap-6 md:items-center md:font-semibold p-2"
+    >
+      <li
+        class="text-xl transition
+			hover:scale-110 text-black/60 dark:text-gray-300"
+      >
+        <a href={i18n.NAV_EN_LINK}>
+          {i18n.NAV_EN}
+        </a>
+      </li>
+      <li
+        class="text-xl transition
+			hover:scale-110 text-black/60 dark:text-gray-300"
+      >
+        <ThemeToggle />
+      </li>
+      <!-- 			<li>
 				<a
 					target="_blank"
 					rel="noopener noreferrer" 
@@ -100,9 +109,9 @@ const i18n = getI18N({ currentLocale });
 					<Spotify />
 				</a>
 			</li> -->
-  </ul>
+    </ul>
 
-  <!-- <button class="md:hidden">
+    <!-- <button class="md:hidden">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -117,4 +126,5 @@ const i18n = getI18N({ currentLocale });
         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
     </svg>
   </button> -->
+  </div>
 </header>
