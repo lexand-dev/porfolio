@@ -99,7 +99,9 @@ export default function Component({ project }: ProjectProps) {
           {/* Music player card - 2 columns, 1 row */}
           <div className="lg:col-span-2 bg-gradient-to-br from-neutral-800 to-neutral-900 pb-0 rounded-3xl p-6">
             <a
-              href=""
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               className="size-full flex items-center justify-center flex-col"
             >
               <Icons.github className="size-8 md:size-24 text-white" />
@@ -112,7 +114,9 @@ export default function Component({ project }: ProjectProps) {
           {/* 25M card - 2 columns, 1 row */}
           <div className="lg:col-span-2 bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-3xl p-6 pb-0 flex items-center">
             <a
-              href=""
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
               className="size-full flex items-center justify-center flex-col"
             >
               <Icons.link className="size-8 md:size-24 text-white" />
